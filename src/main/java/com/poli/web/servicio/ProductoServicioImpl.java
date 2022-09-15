@@ -13,7 +13,7 @@ public class ProductoServicioImpl implements ProductoServicio {
 
 	@Autowired
 	private ProductoRepositorio repositorio;
-	
+
 	@Override
 	public List<Producto> listarTodosLosProductos() {
 		return repositorio.findAll();
@@ -22,7 +22,25 @@ public class ProductoServicioImpl implements ProductoServicio {
 	@Override
 	public Producto guardarProducto(Producto producto) {
 		// TODO Auto-generated method stub
-		return  repositorio.save(producto);
+		return repositorio.save(producto);
+	}
+
+	@Override
+	public Producto obtenerProductoPorId(Long id) {
+		// TODO Auto-generated method stub
+		return repositorio.findById(id).get();
+	}
+
+	@Override
+	public Producto actualizarProducto(Producto producto) {
+		// TODO Auto-generated method stub
+		return repositorio.save(producto);
+	}
+
+	@Override
+	public void eliminarProducto(Long id) {
+		// TODO Auto-generated method stub
+		repositorio.deleteById(id);
 	}
 
 }

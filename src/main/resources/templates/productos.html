@@ -45,7 +45,10 @@
 					<td th:text="${producto.cantidad}">Cantidad</td>
 					<td th:text="${producto.precio}">Precio</td>
 					<td th:text="${producto.precioTotal}">Precio Total</td>
-					<td>Acciones</td>
+					<td>
+					<a th:href="@{/productos/editar/{id}(id=${producto.id})}" class="btn btn-info">Editar</a>
+					<a th:href="@{/productos/{id}(id=${producto.id})}" class="btn btn-danger">Eliminar</a>
+					</td>
 				</tr>
 			</tbody>
 		</table>
