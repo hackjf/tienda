@@ -8,4 +8,6 @@ public interface ProductoServicio {
 
 	public List<Producto> listarTodosLosProductos();
 	
+	public Producto guardarProducto(Producto producto);
+	
 }

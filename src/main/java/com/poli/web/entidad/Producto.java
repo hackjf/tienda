@@ -39,6 +39,14 @@ public class Producto {
 		this.cantidad = cantidad;
 		this.precioTotal = precioTotal;
 	}
+	
+	public Producto(String nombre, int precio, int cantidad, int precioTotal) {
+		super();
+		this.nombre = nombre;
+		this.precio = precio;
+		this.cantidad = cantidad;
+		this.precioTotal = precioTotal;
+	}
 
 	public Long getId() {
 		return id;
@@ -73,7 +81,7 @@ public class Producto {
 	}
 
 	public int getPrecioTotal() {
-		return precioTotal;
+		return precioTotal = precio * cantidad;
 	}
 
 	public void setPrecioTotal(int precioTotal) {
