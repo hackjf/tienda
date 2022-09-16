@@ -27,25 +27,9 @@ public class Producto {
 	@Column(name = "precioTotal", nullable = false,length = 50)
 	private int precioTotal;
 	
-	public Producto() {
-		
-	}
-
-	public Producto(Long id, String nombre, int precio, int cantidad, int precioTotal) {
-		super();
-		this.id = id;
-		this.nombre = nombre;
-		this.precio = precio;
-		this.cantidad = cantidad;
-		this.precioTotal = precioTotal;
-	}
 	
-	public Producto(String nombre, int precio, int cantidad, int precioTotal) {
-		super();
-		this.nombre = nombre;
-		this.precio = precio;
-		this.cantidad = cantidad;
-		this.precioTotal = precioTotal;
+	public Producto () {
+		
 	}
 
 	public Long getId() {
@@ -88,11 +72,18 @@ public class Producto {
 		this.precioTotal = precioTotal;
 	}
 
-	@Override
-	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", cantidad=" + cantidad
-				+ ", precioTotal=" + precioTotal + "]";
+	
+
+	public Producto(Long id, String nombre, int precio, int cantidad, int precioTotal) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.cantidad = cantidad;
+		this.precioTotal = precioTotal;
 	}
+	
+	
 	
 
 }
